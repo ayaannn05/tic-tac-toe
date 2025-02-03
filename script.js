@@ -47,7 +47,6 @@ boxes.forEach((box) => {
       turnO = !turnO;
     } else {
       box.innerHTML = "O";
-      box.style.color = "red";
       turnO = !turnO;
     }
     box.disabled = true;
@@ -66,20 +65,7 @@ function checkWinner() {
         // console.log("winner");
         showWinner(val1);
       } else {
-        console.log("no winner");
-
-        let isTie = true;
-        for (let box of boxes) {
-          if (box.innerHTML == "") {
-            isTie = false;
-            break;
-          }
-        }
-        if (isTie) {
-          msg.innerHTML = "It's a Tie";
-          msgContainer.classList.remove("hide");
-          disabledBtn();
-        }
+        // console.log("no winner");
       }
     }
   }
